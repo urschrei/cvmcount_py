@@ -1,6 +1,6 @@
 [package]
-name = "cvmcount"
-version = "0.1.6"
+name = "cvm"
+version = "0.1.7"
 edition = "2021"
 
 [lib]
