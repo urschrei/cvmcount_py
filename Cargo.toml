@@ -11,5 +11,5 @@ crate-type = ["cdylib"]
 [dependencies]
 cvmcount = "0.2.0"
 numpy = "0.21.0"
-pyo3 = { version = "0.21.2", features = ["abi3", "abi3-py310"] }
+pyo3 = { version = "0.21.2", features = ["abi3", "abi3-py310", "abi3-py311", "abi3-py312"] }
 rustc-hash = "2.0.0"
