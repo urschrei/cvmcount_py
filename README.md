@@ -14,7 +14,7 @@ The count-distinct problem, or cardinality-estimation problem refers to counting
 In order to overcome this constraint, streaming algorithms have been developed: [Flajolet-Martin](https://en.wikipedia.org/wiki/Flajolet–Martin_algorithm), LogLog, [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog). The algorithm implemented by this library is an improvement on these in one particular sense: it is extremely simple. Instead of hashing, it uses a sampling method to compute an [unbiased estimate](https://www.statlect.com/glossary/unbiased-estimator#:~:text=An%20estimator%20of%20a%20given,Examples) of the cardinality.
 
 # What is an Element
-Various integer flavours, strings, any Struct on which you have implemented the traits. Not `f32` / `f64`, however, as they don't form a total ordering due to the presence of NaN.
+Any hashable Python object or primitive. Not `f32` / `f64`, however, as they don't form a total ordering due to the presence of NaN.
 
 ## Further Details
 Don Knuth has written about the algorithm (he refers to it as **Algorithm D**) at https://cs.stanford.edu/~knuth/papers/cvm-note.pdf, and does a far better job than I do at explaining it. You will note that on p1 he describes the buffer he uses as a data structure – called a [treap](https://en.wikipedia.org/wiki/Treap#:~:text=7%20External%20links-,Description,(randomly%20chosen)%20numeric%20priority.) – as a binary tree
