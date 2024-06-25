@@ -1,10 +1,10 @@
 [package]
-name = "cvmcounter"
-version = "0.1.9"
+name = "distinct"
+version = "0.1.10"
 edition = "2021"
 
 [lib]
-name = "cvmcounter"
+name = "distinct"
 # "cdylib" is necessary to produce a shared library for Python to import from.
 crate-type = ["cdylib"]
 
