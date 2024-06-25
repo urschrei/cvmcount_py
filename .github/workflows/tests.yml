@@ -125,5 +125,9 @@ jobs:
       id-token: write
     steps:
       - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
       - name: PyPI Publish
         uses: pypa/gh-action-pypi-publish@v1.9.0
