@@ -55,7 +55,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          pip install ckmeans --find-links dist --force-reinstall
+          pip install cvmcount --find-links dist --force-reinstall
           pip install pytest
           pip install numpy
           pytest
@@ -72,7 +72,7 @@ jobs:
             pip3 install -U pip pytest numpy
           run: |
             set -e
-            pip3 install ckmeans --find-links dist --force-reinstall
+            pip3 install cvmcount --find-links dist --force-reinstall
             pytest
 
   windows:
@@ -109,7 +109,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          pip install ckmeans --find-links dist --force-reinstall
+          pip install cvmcount --find-links dist --force-reinstall
           pip install pytest
           pip install numpy
           pytest
@@ -147,7 +147,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          pip install ckmeans --find-links dist --force-reinstall
+          pip install cvmcount --find-links dist --force-reinstall
           pip install pytest
           pip install numpy
           pytest
