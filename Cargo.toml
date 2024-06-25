@@ -1,0 +1,15 @@
+[package]
+name = "cvmcount_py"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "cvmcount"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+crate-type = ["cdylib"]
+
+[dependencies]
+cvmcount = "0.2.0"
+numpy = "0.21.0"
+pyo3 = { version = "0.21.2", features = ["abi3", "abi3-py310"] }
+rustc-hash = "2.0.0"
