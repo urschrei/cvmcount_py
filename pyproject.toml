@@ -12,7 +12,7 @@ testpaths = [
 ]
 
 [project]
-name = "cvm"
+name = "cvmcounter"
 description = "Use the CVM algorithm to quickly estimate the number of distinct elements in a stream"
 authors = [{ name = "Stephan Hügel", email = "urschrei@gmail.com" }]
 license = {file = "license.txt"}
