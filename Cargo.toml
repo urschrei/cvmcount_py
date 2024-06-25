@@ -1,10 +1,10 @@
 [package]
-name = "distinct"
-version = "0.1.10"
+name = "count_distinct"
+version = "0.1.11"
 edition = "2021"
 
 [lib]
-name = "distinct"
+name = "count_distinct"
 # "cdylib" is necessary to produce a shared library for Python to import from.
 crate-type = ["cdylib"]
 

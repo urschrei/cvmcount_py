@@ -23,11 +23,11 @@ Don Knuth has written about the algorithm (he refers to it as **Algorithm D**) a
 where _s_ >= 1. Our implementation doesn't use a treap as a buffer; it uses a fast HashSet with the [FxHash](https://docs.rs/fxhash/latest/fxhash/) algorithm: we pay the hash cost when inserting, but search in step **D4** is `O(1)`. The library may switch to a treap implementation eventually.
 
 # Installation
-`pip install distinct`
+`pip install count_distinct`
 
 # Usage
 ```python
-from distinct import CVM
+from count_distinct import CVM
 
 # values for epsilon, delta, and stream size are described in the docstring.
 counter = CVM(0.8, 0.1, 1000)
