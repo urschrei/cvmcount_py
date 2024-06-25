@@ -67,7 +67,7 @@ impl CVM {
 }
 
 #[pymodule]
-fn cvmcount(_py: Python, m: &PyModule) -> PyResult<()> {
+fn cvmcount(_py: Python, m: Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<CVM>()?;
     // m.add_function(wrap_pyfunction!(version, m)?)?;
 
