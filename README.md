@@ -31,8 +31,8 @@ from cvmcount import CVM
 
 # values for epsilon, delta, and stream size are described in the docstring.
 counter = CVM(0.8, 0.1, 1000)
-cvm.add(2)
-cvm.add(5)
+counter.add(2)
+counter.add(5)
 # keep adding elements
 count = counter.calculate_final_result()
 # you can keep adding elements if you wish
