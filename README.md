@@ -38,5 +38,13 @@ count = counter.calculate_final_result()
 # you can keep adding elements if you wish
 ```
 
+# Perf
+## Memory, 10e8 random 7-digit positive integers
+Allocation of integer array: 763 MiB
+
+`count_distinct`: 768 MiB
+
+`np.unique`: 1.7 GiB
+
 ## Note
 If you're thinking about using this library, you presumably know that it only provides an estimate (within the specified bounds), similar to something like HyperLogLog. You are trading accuracy for speed!
