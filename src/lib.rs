@@ -3,7 +3,6 @@ use pyo3::prelude::*;
 use std::hash::{Hash, Hasher};
 
 /// A wrapper for `PyObject` to implement `Hash` and `Eq`.
-#[derive(Clone)]
 pub struct PyObjectWrapper(PyObject);
 
 impl PyObjectWrapper {
