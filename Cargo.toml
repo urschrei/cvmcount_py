@@ -9,8 +9,8 @@ name = "count_distinct"
 crate-type = ["cdylib"]
 
 [dependencies]
-cvmcount = "0.2.0"
-pyo3 = { version = "0.22.5", features = ["abi3", "abi3-py310", "abi3-py311", "abi3-py312"] }
+cvmcount = "1.0.0"
+pyo3 = { version = "0.25.1", features = ["abi3", "abi3-py310", "abi3-py311", "abi3-py312"] }
 
 [profile.release]
 lto = true

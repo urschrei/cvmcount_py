@@ -1,19 +1,12 @@
-use ::cvmcount::CVM as RustCVM;
+use cvmcount::CVM as RustCVM;
 use pyo3::prelude::*;
-use std::hash::{Hash, Hasher};
 
-/// A wrapper for `PyObject` to implement `Hash` and `Eq`.
+/// A wrapper for `PyObject` to implement `Eq`, `PartialOrd`, and `Ord`.
 pub struct PyObjectWrapper(PyObject);
 
 impl PyObjectWrapper {
     fn new(obj: PyObject) -> Self {
         PyObjectWrapper(obj)
-    }
-}
-
-impl Hash for PyObjectWrapper {
-    fn hash<H: Hasher>(&self, state: &mut H) {
-        self.0.as_ptr().hash(state);
     }
 }
 
@@ -24,6 +17,18 @@ impl PartialEq for PyObjectWrapper {
 }
 
 impl Eq for PyObjectWrapper {}
+
+impl PartialOrd for PyObjectWrapper {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+impl Ord for PyObjectWrapper {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        self.0.as_ptr().cmp(&other.0.as_ptr())
+    }
+}
 
 #[pyclass]
 /// Initialise the algorithm
