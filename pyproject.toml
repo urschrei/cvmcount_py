@@ -1,5 +1,5 @@
 [build-system]
-requires = ["maturin>=1.6,<2.0", "numpy >= 2.0.0"]
+requires = ["maturin>=1.9,<2.0", "numpy >= 2.0.0"]
 build-backend = "maturin"
 
 [tool.pytest.ini_options]
@@ -13,6 +13,7 @@ testpaths = [
 
 [project]
 name = "count_distinct"
+version = "0.2.0"
 description = "Use the CVM algorithm to quickly estimate the number of distinct elements in a stream"
 authors = [{ name = "Stephan Hügel", email = "urschrei@gmail.com" }]
 license = {file = "LICENSE.md"}
