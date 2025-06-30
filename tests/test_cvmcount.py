@@ -1,5 +1,5 @@
 import numpy as np
-from cvmcount import CVM
+from count_distinct import CVM
 
 
 def test_cvmcount() -> None:
