@@ -17,10 +17,7 @@ In order to overcome this constraint, streaming algorithms have been developed: 
 Any hashable Python object or primitive. Not `f32` / `f64`, however, as they don't form a total ordering due to the presence of NaN.
 
 ## Further Details
-Don Knuth has written about the algorithm (he refers to it as **Algorithm D**) at https://cs.stanford.edu/~knuth/papers/cvm-note.pdf, and does a far better job than I do at explaining it. You will note that on p1 he describes the buffer he uses as a data structure – called a [treap](https://en.wikipedia.org/wiki/Treap#:~:text=7%20External%20links-,Description,(randomly%20chosen)%20numeric%20priority.) – as a binary tree
-> "that’s capable of holding up to _s_ ordered pairs (_a_, _u_), where _a_ is an element of the stream and _u_ is a real number, 0 ≤ _u_ < 1."
-
-where _s_ >= 1. Our implementation doesn't use a treap as a buffer; it uses a fast HashSet with the [FxHash](https://docs.rs/fxhash/latest/fxhash/) algorithm: we pay the hash cost when inserting, but search in step **D4** is `O(1)`. The library may switch to a treap implementation eventually.
+Don Knuth has written about the algorithm (he refers to it as **Algorithm D**) at https://cs.stanford.edu/~knuth/papers/cvm-note.pdf, and does a far better job than I do at explaining it.
 
 # Installation
 `pip install count_distinct`
