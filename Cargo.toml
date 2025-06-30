@@ -1,7 +1,7 @@
 [package]
 name = "count_distinct"
 version = "0.1.16"
-edition = "2021"
+edition = "2024"
 
 [lib]
 name = "count_distinct"
