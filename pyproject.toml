@@ -37,8 +37,8 @@ Tracker = "https://github.com/urschrei/cvmcount_py/issues"
 [tool.maturin]
 features = ["pyo3/extension-module"]
 
-[project.optional-dependencies]
-test = [
+[dependency-groups]
+dev = [
     "pytest >= 7.4.2",
     "pyperf >= 2.7.0",
     "numpy >= 2.0",

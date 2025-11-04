@@ -20,6 +20,7 @@ Any hashable Python object or primitive. Not `f32` / `f64`, however, as they don
 Don Knuth has written about the algorithm (he refers to it as **Algorithm D**) at https://cs.stanford.edu/~knuth/papers/cvm-note.pdf, and does a far better job than I do at explaining it.
 
 # Installation
+`uv add count_distinct` or  
 `pip install count_distinct`
 
 # Usage
