@@ -2,10 +2,10 @@ use cvmcount::CVM as RustCVM;
 use pyo3::prelude::*;
 
 /// A wrapper for `PyObject` to implement `Eq`, `PartialOrd`, and `Ord`.
-pub struct PyObjectWrapper(PyObject);
+pub struct PyObjectWrapper(Py<PyAny>);
 
 impl PyObjectWrapper {
-    fn new(obj: PyObject) -> Self {
+    fn new(obj: Py<PyAny>) -> Self {
         PyObjectWrapper(obj)
     }
 }
@@ -59,7 +59,7 @@ impl CVM {
     }
 
     /// Add an element, potentially updating the unique element count
-    pub fn add(&mut self, elem: PyObject) -> PyResult<()> {
+    pub fn add(&mut self, elem: Py<PyAny>) -> PyResult<()> {
         self.cvm.process_element(PyObjectWrapper::new(elem));
         Ok(())
     }
