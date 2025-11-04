@@ -61,7 +61,7 @@ jobs:
           set -e
           python3 -m venv .venv
           source .venv/bin/activate
-          pip install count_distinct[test] --find-links dist --force-reinstall
+          pip install count_distinct --group dev --find-links dist --force-reinstall
           pytest
       - name: pytest
         if: ${{ !startsWith(matrix.platform.target, 'x86') && matrix.platform.target != 'ppc64' }}
@@ -76,7 +76,7 @@ jobs:
             pip3 install -U pip pytest
           run: |
             set -e
-            pip3 install count_distinct[test] --find-links dist --force-reinstall
+            pip install count_distinct --group dev --find-links dist --force-reinstall
             pytest
 
 
@@ -123,7 +123,7 @@ jobs:
           set -e
           python3 -m venv .venv
           source .venv/Scripts/activate
-          pip install count_distinct[test] --find-links dist --force-reinstall
+          pip install count_distinct --group dev --find-links dist --force-reinstall
           pytest
 
   macos:
@@ -162,7 +162,7 @@ jobs:
           set -e
           python3 -m venv .venv
           source .venv/bin/activate
-          pip install count_distinct[test] --find-links dist --force-reinstall
+          pip install count_distinct --group dev --find-links dist --force-reinstall
           pytest
 
   sdist:
