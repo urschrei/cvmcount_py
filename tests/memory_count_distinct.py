@@ -1,5 +1,4 @@
 import numpy as np
-import pyperf
 from count_distinct import CVM
 
 
