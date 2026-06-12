@@ -1,4 +1,3 @@
-import numpy as np
 from count_distinct import CVM
 
 
